@@ -1,0 +1,53 @@
+﻿--- POUR WINDOWS ---
+	* Double-cliquez sur le fichier "LancementWin.bat". Des consoles vont s'ouvrir.
+	* Attendez que la console intitulée "Tomcat" affiche "Server startup in xxxx ms" avant de passer au lancement des applications.
+	
+--- POUR MAC ---
+	
+	* Placez impérativement le dossier sur le Bureau.
+	
+	* Exécutez le fichier qui se trouve dans jdk-8u5-macosx-64.dmg (Cela va lancer l'installation de JDK, suivez toutes les étapes nécessaires).
+	
+	* Double-cliquez sur le fichier "LancementMac.command". Un terminal va se lancer et effectuer diverses opérations.
+
+--- LANCEMENT DE L'APPLICATION DU MEDECIN --- 
+	* Ouvrez un navigateur, comme Google Chrome, Mozilla Firefox, Safari ou Internet Explorer.
+	* Dans la barre d'adresses, saisissez "localhost:8080/AppliSuperviseur". L'application se lance et vous affiche la liste des enfants qui possèdent un compte sur l'application.
+Remarque : Pour jouer, les enfants doivent se connecter avec leur compte. Pensez à créez un compte pour chaque enfant !
+	
+--- LANCEMENT DU JEU ---
+IMPORTANT : Si vous êtes sous Windows, il faut désactiver le pare-feu sur votre machine, sinon les enfants ne pourront pas accéder au jeu.
+	* Il faut lancer un navigateur sur la machine de l'enfant (n'importe lequel sauf Internet Explorer).
+	* Afin que la machine de l'enfant puisse accéder au jeu, il est nécessaire de connaître l'adresse IP ou le nom de la machine du médecin/superviseur. 
+		--- OBTENTION DE L'ADRESSE IP SOUS WINDOWS ---
+		* Dans Démarrer, cliquez sur "Executer" et saisissez "cmd.exe". Appuyez sur Entrée. Une console se lance.
+		* Dans cette console, tapez "ipconfig" puis appuyez sur la touche "Entrée". La liste des cartes réseaux s'affichent, avec leurs différents paramètres.
+		* Notez quelque part l'adresse Ipv4 de votre machine. C'est avec cette adresse que les enfants pourront accéder au jeu situé sur votre machine.
+		--- OBTENTION DE L'ADRESSE IP SOUS MAC ---
+		* Lancez un terminal
+		* Tapez "ifconfig". L'adresse IP correspond au champ "inet addr" de votre carte réseau. Notez-la.
+	* Une fois l'adresse récupérée, il suffit de saisir dans la barre d'adresses du navigateur de l'enfant : votre adresse IP (ou le nom de votre machine le cas échéant) suivie de ":8080/AppliPiloteJeu"
+		Par exemple, si votre adresse IP est "192.168.1.11", alors les enfants doivent saisir "192.168.1.11:8080/AppliPiloteJeu" et appuyer sur "Entrée" afin de lancer le jeu.
+
+-- FONCTIONNALITES --	
+	* La page d'accueil affiche la liste des enfants qui ont un compte.
+	* Vous pouvez créer un compte pour un enfant en cliquant sur "Créer un compte".
+		ATTENTION : Une fois le compte crée, vous ne pourrez plus le modifier.
+	* Vous pouvez voir les résultats précédents et en cours d'un enfant en cliquant sur le lien "Résultats" qui lui est associé dans le tableau.
+	* La page des résultats dispose également d'un bouton qui vous permet de voir les règles du jeu de l'enfant. Vous pouvez changer ces règles du jeu vous-mêmes, ou laisser le jeu gérer ses propres règles par défaut (en cochant la petite case en bas à gauche dans le tableau), qui sont les suivantes : 
+	--- NIVEAU 1 (vitesse lente, objets triangle et carré de toutes les couleurs (vert, jaune, bleu)) ---
+		* Phase 1 : Un bac receveur de formes vertes
+		* Phase 2 : Un bac receveur de formes carrées
+		* Phase 3 : idem phase 1
+		* Phase 4 : idem phase 2
+	--- NIVEAU 2 (vitesse lente, tous les objets (rond,carré,triangle) de toutes les couleurs) ---
+		* Phase 1 : Deux bacs, vert et jaune
+		* Phase 2 : Deux bacs, carré et triangle
+		* Phase 3 : idem phase 1
+		* Phase 4 : idem phase 2
+	--- NIVEAU 3 (tous les objets (rond,carré,triangle) de toutes les couleurs) ---
+		* Phase 1 : Trois bacs, vert,jaune et bleu avec vitesse moyenne
+		* Phase 2 : Trois bacs, carré, triangle et rond avec vitesse moyenne
+		* Phase 3 : idem phase 2 avec vitesse rapide
+		* Phase 4 : idem phase 1 avec vitesse rapide
+	* Lorsque l'enfant quitte le jeu, sa partie est sauvegardée.
